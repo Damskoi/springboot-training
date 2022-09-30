@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: deployment-training-mysql
+
+spec:
+    template:
+        metadata:
+            name: training
+            labels:
+                app: spring-mysql
+                type: backend-mysql
+        spec:
+            containers:
+                - name: training
+                  image: docker.io/damskoi/maven-training-mysql
+                  ports:
+                      - containerPort: 8080
+            imagePullSecrets:
+                - name: myregistrykey
+    replicas: 1
+    selector:
+        matchLabels:
+            app: spring-mysql
+            type: backend-mysql

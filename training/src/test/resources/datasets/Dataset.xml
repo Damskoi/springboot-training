@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+    <t_organisation id="1" org="abc" nom="org1" description="first organ"
+                    created_by="toto" creation_date="2022-01-01 10:54:30.067"
+                    updated_by="toto" updated_date="2022-01-02 10:54:30.067"
+                    tech_lock="0"/>
+    <t_organisation id="2" org="aze" nom="org2" description="second org"
+                    created_by="toto" creation_date="2022-01-01 10:54:30.067"
+                    updated_by="toto" updated_date="2022-01-02 10:54:30.067"
+                    tech_lock="0"/>
+    <t_employe id="1" matricule="mat10001" nom="hello" prenom="world"
+               date_embauche="2022-01-01 10:54:30.067" fk_organisation_id="1"
+               created_by="toto" creation_date="2022-01-01 10:54:30.067"
+               updated_by="toto" updated_date="2022-01-02 10:54:30.067"
+               tech_lock="0"/>
+    <t_employe id="2" matricule="mat10002" nom="mornal" prenom="christophe"
+               date_embauche="2022-01-01 10:54:30.067" fk_organisation_id="1"
+               created_by="toto" creation_date="2022-01-01 10:54:30.067"
+               updated_by="toto" updated_date="2022-01-02 10:54:30.067"
+               tech_lock="0"/>
+    <t_salle id="1" nom="sal101" capacite="5"
+               created_by="toto" creation_date="2022-01-01 10:54:30.067"
+               updated_by="toto" updated_date="2022-01-02 10:54:30.067"
+               tech_lock="0"/>
+    <t_salle id="2" nom="sal102" capacite="5"
+             created_by="toto" creation_date="2022-01-01 10:54:30.067"
+             updated_by="toto" updated_date="2022-01-02 10:54:30.067"
+             tech_lock="0"/>
+    <t_reservation id="1" date_time="2022-01-01 10:54:30.067"
+                   fk_employe_id="1" fk_salle_id="1"
+                   created_by="toto" creation_date="2022-01-01 10:54:30.067"
+                   updated_by="toto" updated_date="2022-01-02 10:54:30.067"
+                   tech_lock="0"/>
+</dataset>

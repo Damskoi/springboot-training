@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: deployment-mysql
+
+spec:
+    template:
+        metadata:
+            name: mysql
+            labels:
+                app: bdd-mysql
+
+            spec:
+                SystemContext:
+                    runAsUser: user
+                container:
+                    - name: mysql
+                      image: mysql
+                      ports:
+                          - containerPort: 3306
+                EnvFrom:
+
+    replicas: 1
+    selector:
+        matchLabels:
+            app: bdd-mysql

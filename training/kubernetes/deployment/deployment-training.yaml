@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: deployment-training
+
+spec:
+    template:
+        metadata:
+            name: training
+            labels:
+                app: spring
+                type: backend
+        spec:
+            containers:
+                - name: training
+                  image: docker.io/damskoi/maven-training
+                  ports:
+                      - containerPort: 8080
+    replicas: 1
+    selector:
+        matchLabels:
+            app: spring
+            type: backend
